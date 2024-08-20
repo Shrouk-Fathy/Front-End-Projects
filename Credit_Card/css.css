@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Poppins:wght@300;400;500;600&family=Roboto:wght@500&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+section{
+    min-height: 100vh;
+    width: 100%;
+    background-color: rgb(38, 38, 46);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+section::before{
+    content: "";
+    position: absolute;
+    width: 240px;
+    height: 240px;
+    background-image: linear-gradient(90deg , rgb(151, 41, 171) , rgb(255, 255, 255));
+    transform: translate(-150px , -100px);
+    border-radius: 50%;
+}
+section::after{
+    content: "";
+    position: absolute;
+    width: 240px;
+    height: 240px;
+    background-image: linear-gradient(90deg , rgb(151, 41, 171) , rgb(255, 255, 255));
+    transform: translate(150px , 100px);
+    border-radius: 50%;
+}
+.container{
+    position: relative;
+    max-width: 380px;
+    width: 100%;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+    transform-style: preserve-3d;
+    transition: .5s;
+    z-index: 2;
+    transform: translateY(-100px);
+}
+.container > div{
+    position: absolute;
+    width: 100%;
+    padding: 28px;
+    border-radius: 28px;
+    backdrop-filter: blur(25px);
+}
+.container .back{
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+}
+.container:hover{
+    transform: rotateY(180deg) translateY(-100px);
+}
+.logo img{
+    width: 70px;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header .chip{
+    width: 60px;
+    border-radius: 6px;
+    transform: translate(0 , -10px);
+}
+.number{
+    transform: translate(0 , 15px);
+}
+.valid-data{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transform: translate(0 , 10px);
+}
+.number h5{
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+.back header{
+    color: white;
+    font-size: 10px;
+}
+.back .black{
+
+    width: 100%;
+    background-color: black;
+    height: 50px;
+    margin-top: 10px;
+}
+.data{
+    position: relative;
+    margin-top: 30px;
+ 
+    /* transform: translateY(100px); */
+}
+.num{
+    background-color: white;
+    color: black;
+}
+.num::before{
+    content: '';
+    position: absolute;
+    top: -20px;
+    width: 80%;
+    height: 60px;
+    background-color: rgb(236, 232, 232);
+    border-radius: 5px;
+}
+.data .th{
+    margin-top: 30px;
+    font-size: 10px;
+}
+/* --------------------------------------------- */
